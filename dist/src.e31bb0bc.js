@@ -38240,13 +38240,13 @@ var Modal = function Modal(_ref) {
   }, content), _react.default.createElement("footer", {
     className: "modal-card-foot"
   }, _react.default.createElement("button", {
-    className: "button is-success",
+    className: "button is-dark",
     onClick: function onClick() {
       return dispatch({
         type: 'MODAL_TOGGLE'
       });
     }
-  }, "Save changes"), _react.default.createElement("button", {
+  }, "Accept"), _react.default.createElement("button", {
     className: "button",
     onClick: function onClick() {
       return dispatch({
@@ -38276,21 +38276,37 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var App = function App() {
   var dispatch = (0, _reactRedux.useDispatch)();
-  return _react.default.createElement("section", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Modal.default, {
+    title: "Cool modal \u2728",
+    content: "This sample application uses Bulma CSS framework for better looks, if you got something better in mind, just do *npm uninstall bulma* and remove its import in the index.js file."
+  }), _react.default.createElement("section", {
+    className: "hero is-light is-bold"
+  }, _react.default.createElement("div", {
+    className: "hero-body"
+  }, _react.default.createElement("div", {
+    className: "container"
+  }, _react.default.createElement("h1", {
+    className: "title has-text-centered"
+  }, "React & Redux with Parcel!"), _react.default.createElement("h1", {
+    className: "subtitle has-text-centered"
+  }, "Zero configuration project boilerplate for a React front-end application.")))), _react.default.createElement("section", {
     className: "section"
-  }, _react.default.createElement(_Modal.default, {
-    title: "Test modal",
-    content: "This modal is made using Redux global state as a flag for displaying its content."
-  }), _react.default.createElement("h1", {
-    className: "title has-text-primary"
-  }, "React Parcel Starter"), _react.default.createElement("button", {
-    className: "button is-primary is-outlined",
+  }, _react.default.createElement("p", null, "Parcel brings the comodity of not having to set up complex webpack configuration file, which requires implementation of other independent modules to work as desired. Ideal for small or simple projects!"), _react.default.createElement("br", null), _react.default.createElement("p", null, "This boilerplate project comes with Redux (application state management) implemented with use of Hooks (react-redux package), and a sample modal trigger that uses said state to better illustrate the", ' ', _react.default.createElement("em", null, "application state"), "."), _react.default.createElement("br", null), _react.default.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignContent: 'center'
+    }
+  }, _react.default.createElement("button", {
+    className: "button is-dark is-outlined",
     onClick: function onClick() {
       return dispatch({
         type: 'MODAL_TOGGLE'
       });
     }
-  }, "Bring Modal"));
+  }, "Bring Modal")), _react.default.createElement("br", null), _react.default.createElement("p", {
+    className: "has-text-centered"
+  }, "Like it? Get started now, ", _react.default.createElement("a", null, "here"), "!")));
 };
 
 var _default = App;
@@ -38672,7 +38688,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41233" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37733" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
