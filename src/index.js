@@ -7,4 +7,9 @@ import App from './App.js'
 import '@babel/polyfill'
 import 'bulma/css/bulma.min.css'
 
-ReactDOM.render(<Provider store={appStore}><App /></Provider>, document.getElementById('root'))
+ReactDOM.render(
+  <Provider store={appStore}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
